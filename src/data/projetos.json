@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "title": "QInvest",
+    "description": "QInvest é uma aplicação web fullstack desenvolvida como Trabalho de Conclusão de Curso (TCC) do Técnico em Informática (2023). O projeto tem como objetivo auxiliar no controle e planejamento de investimentos financeiros, oferecendo uma interface moderna e funcional. \n Atuei como líder técnico do grupo, sendo responsável pelas principais decisões arquiteturais, organização do time e integração das tecnologias. Além disso, participei ativamente como desenvolvedor full stack, construindo tanto a estrutura de backend (Laravel) quanto o frontend (Vite).",
+    "link": "https://github.com/GKsegura/qinvest-web",
+    "image": "/assets/qinvest.png",
+    "languages": [
+      "Laravel",
+      "JavaScript",
+      "CSS",
+      "PostgreSQL"
+    ],
+    "stack": "Full Stack",
+    "year": 2023,
+    "status": "Concluído"
+  },
+  {
+    "id": 2,
+    "title": "Portfólio GKsegura",
+    "description": "Este repositório serve como portfólio principal de projetos desenvolvidos por mim.\nAqui você encontra aplicações web completas, APIs RESTful e experimentações que demonstram minha evolução como desenvolvedor.\nMeus projetos são focados em boas práticas de código, clareza arquitetural e, sempre que possível, uma pitada de criatividade.",
+    "link": "https://github.com/GKsegura/repositorio-gksegura",
+    "image": "/assets/repositorio.png",
+    "languages": [
+      "React",
+      "JavaScript",
+      "CSS"
+    ],
+    "stack": "Front-end",
+    "year": 2025,
+    "status": "Em desenvolvimento"
+  },
+  {
+    "id": 3,
+    "title": "EcoTube",
+    "description": "EcoTube é um e-commerce de canudos de vidro sustentáveis, criado com o objetivo de promover o consumo consciente através da tecnologia.\nA plataforma permite a navegação por produtos, exibição de detalhes, adição ao carrinho e simula a jornada de compra de forma intuitiva.\nO projeto foi desenvolvido com foco na usabilidade, componentização e um visual limpo e funcional — alinhando propósito ecológico e boa experiência do usuário.",
+    "link": "https://github.com/GKsegura/EcoTube",
+    "image": "/assets/ecotube.png",
+    "languages": [
+      "PHP",
+      "CSS",
+      "JavaScript",
+      "PostgreSQL"
+    ],
+    "stack": "Full Stack",
+    "year": 2022,
+    "status": "Concluído"
+  }
+]

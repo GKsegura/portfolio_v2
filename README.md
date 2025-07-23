@@ -1,13 +1,35 @@
-# React + Vite
+# 💼 Meu Portfólio Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém o código-fonte do meu **portfólio como desenvolvedor web**. O objetivo é apresentar de forma clara e moderna os meus projetos, habilidades técnicas e formas de contato.
 
-Currently, two official plugins are available:
+Construído com **React** + **Vite**, o site foi pensado para ter uma performance rápida, design responsivo e visual atrativo. Ele é constantemente atualizado conforme evoluo na minha jornada como desenvolvedor.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# portfolio_v2
+- React
+- Vite
+- JavaScript (ES6+)
+- CSS / HTML
+- ESLint (padronização de código)
+
+---
+
+## 🔗 Acesse o Portfólio Online
+
+👉 [https://gksegura.netlify.app](https://gksegura.netlify.app)
+
+---
+
+## 📫 Contato
+
+Se quiser trocar uma ideia, colaborar ou oferecer um freela:
+
+- Email: **jose.segura.ms@gmail.com**
+- LinkedIn: [linkedin.com/in/jose-a-segura-m-da-silva](https://www.linkedin.com/in/jose-a-segura-m-da-silva/)
+- Instagram: [@\_jose.segura](https://www.instagram.com/_jose.segura/)
+
+---
+
+> Feito com tecnologia e café por José Segura – sempre evoluindo, sempre codando.
