@@ -1,11 +1,16 @@
-import React from 'react';
 import { FaGithub, FaTimes } from 'react-icons/fa';
+import languages from '../../../../../data/languages.json'; // importa direto o JSON
 import styles from './Modal.module.css';
 
-const Modal = ({ projeto, onClose, getStackEmoji, languages }) => {
+const Modal = ({ projeto, onClose, getStackEmoji }) => {
+    const getIcon = (tec) => {
+        const key = tec.toLowerCase().replace(/\s+/g, '');
+        return languages?.[key];
+    };
+
     return (
         <div className={styles.overlay} onClick={onClose}>
-            <div className={styles.projeto} onClick={e => e.stopPropagation()}>
+            <div className={styles.projeto} onClick={(e) => e.stopPropagation()}>
                 <button
                     className={styles.closeButton}
                     onClick={onClose}
@@ -13,24 +18,27 @@ const Modal = ({ projeto, onClose, getStackEmoji, languages }) => {
                 >
                     <FaTimes size={20} />
                 </button>
-                <h3>{projeto.title}</h3>
+
+                <h3>{projeto.nomeProjeto}</h3>
 
                 <div className={styles.projetoConteudo}>
-
                     {/* LADO ESQUERDO */}
                     <div className={styles.left}>
-                        <img src={projeto.image} alt={projeto.title} className={styles.projetoImage} />
+                        <img
+                            src={projeto.imagemProjeto}
+                            alt={projeto.nomeProjeto}
+                            className={styles.projetoImage}
+                        />
 
-                        {projeto.year && (
+                        {projeto.anoDesenvolvimento && (
                             <small className={styles.year}>
-                                Desenvolvido em: {projeto.year}
+                                Desenvolvido em: {projeto.anoDesenvolvimento}
                             </small>
                         )}
 
                         <ul className={styles.languages}>
-                            {projeto.languages.map((tec, index) => {
-                                const key = tec.toLowerCase().replace(/\s+/g, '');
-                                const iconUrl = languages[key];
+                            {projeto.languages?.map((tec, index) => {
+                                const iconUrl = getIcon(tec);
                                 return (
                                     <li key={index}>
                                         {iconUrl && (
@@ -55,14 +63,6 @@ const Modal = ({ projeto, onClose, getStackEmoji, languages }) => {
 
                     {/* LADO DIREITO */}
                     <div className={styles.right}>
-                        <p>
-                            {projeto.description.split('\n').map((line, i) => (
-                                <React.Fragment key={i}>
-                                    {line}
-                                    <br />
-                                </React.Fragment>
-                            ))}
-                        </p>
                         <div className={styles.stackContainer}>
                             {projeto.stack && (
                                 <span className={styles.stack}>
@@ -71,16 +71,24 @@ const Modal = ({ projeto, onClose, getStackEmoji, languages }) => {
                             )}
                         </div>
 
+                        <div className={styles.description}>
+                            {projeto.descricao?.split('\n').map((line, i) => (
+                                line.trim() ? <p key={i}>{line}</p> : <br key={i} />
+                            ))}
+                        </div>
+
                         <div className={styles.linkContainer}>
-                            <a
-                                href={projeto.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles.link}
-                            >
-                                <FaGithub className={styles.icon} />
-                                Ver projeto
-                            </a>
+                            {projeto.urlGithub && (
+                                <a
+                                    href={projeto.urlGithub}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.link}
+                                >
+                                    <FaGithub className={styles.icon} />
+                                    Ver projeto
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>

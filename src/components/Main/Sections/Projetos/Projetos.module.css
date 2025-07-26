@@ -1,19 +1,14 @@
 .projetos {
     border-radius: var(--radius);
-    width: 100%;
     max-width: 1200px;
+    width: 100%;
     text-align: center;
+    margin: 0 auto;
 
     h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
-
-    /* .projetosContainer {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-    } */
 
     .projetosContainer {
         display: flex;
@@ -21,7 +16,6 @@
         justify-content: center;
         gap: 2rem;
     }
-
 }
 
 @media (max-width: 768px) {
@@ -31,7 +25,6 @@
         }
 
         .projetosContainer {
-            display: flex;
             flex-direction: column;
             gap: 1rem;
             padding: 0 1rem;

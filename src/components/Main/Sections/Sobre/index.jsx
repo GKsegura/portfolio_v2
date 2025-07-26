@@ -19,7 +19,7 @@ const Sobre = () => {
                     </div>
                     <div className={styles.textContent}>
                         <h1>
-                            Olá, eu sou o <span className={styles.highlight}>José Segura</span> 👨‍💻
+                            Olá, eu sou o <span className={styles.highlight}>José Segura</span>
                         </h1>
                         <p className={styles.description}>
                             <strong>Desenvolvedor Full-Stack</strong>.<br /><br />
@@ -48,15 +48,12 @@ const Sobre = () => {
             </section>
 
             <section className={styles.tecnologias} id='tecnologias'>
-                <h1>Tecnologias que uso</h1>
+                <h1>Tecnologias que mais uso</h1>
                 <div className={styles.tecnologiasContainer}>
-                    <img src={`${urlTechnologies}javascript/javascript-original.svg`} alt="JavaScript" />
-                    <img src={`${urlTechnologies}react/react-original.svg`} alt="React" />
-                    <img src={`${urlTechnologies}java/java-original.svg`} alt="Java" />
-                    <img src={`${urlTechnologies}php/php-original.svg`} alt="PHP" />
-                    <img src={`${urlTechnologies}laravel/laravel-original.svg`} alt="Laravel" />
-                    <img src={`${urlTechnologies}postgresql/postgresql-original.svg`} alt="PostgreSQL" />
-                    <img src={`${urlTechnologies}mysql/mysql-original.svg`} alt="MySQL" />
+                    <img src={`${urlTechnologies}java/java-original.svg`} alt="Java" title="Java" />
+                    <img src={`${urlTechnologies}javascript/javascript-original.svg`} alt="JavaScript" title="JavaScript" />
+                    <img src={`${urlTechnologies}mysql/mysql-original.svg`} alt="MySQL" title="MySQL" />
+                    <img src={`${urlTechnologies}react/react-original.svg`} alt="React" title="React" />
                 </div>
             </section>
         </>

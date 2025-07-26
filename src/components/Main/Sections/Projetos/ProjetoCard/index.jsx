@@ -13,23 +13,30 @@ const getStackEmoji = (stack) => {
 const ProjetoCard = ({ projeto, onVerMais }) => {
     return (
         <div className={styles.projeto}>
-            <h3>{projeto.title}</h3>
+            <h3>{projeto.nomeProjeto}</h3>
             <div className={styles.projetoConteudo}>
                 <div className={styles.mediaSection}>
-                    <img src={projeto.image} alt={projeto.title} className={styles.projetoImage} />
-                    {projeto.year && <small className={styles.year}>Desenvolvido em: {projeto.year}</small>}
+                    <img src={projeto.imagemProjeto} alt={projeto.title} className={styles.projetoImage} />
+                    {projeto.anoDesenvolvimento && <small className={styles.year}>Desenvolvido em: {projeto.anoDesenvolvimento}</small>}
                     <ul className={styles.languages}>
-                        {projeto.languages.map((tec, index) => {
+                        {projeto.languages?.map((tec, index) => {
                             const normalizedKey = tec.toLowerCase().replace(/\s+/g, '');
                             const iconUrl = languages[normalizedKey];
                             return (
                                 <li key={index}>
-                                    {iconUrl && <img src={iconUrl} alt={tec} onError={(e) => (e.target.style.display = 'none')} />}
+                                    {iconUrl && (
+                                        <img
+                                            src={iconUrl}
+                                            alt={tec}
+                                            onError={(e) => (e.target.style.display = 'none')}
+                                        />
+                                    )}
                                     {tec}
                                 </li>
                             );
                         })}
                     </ul>
+
                     {projeto.status && (
                         <span className={`${styles.status} ${styles[projeto.status.toLowerCase().replace(/\s/g, '')]}`}>
                             {projeto.status}
