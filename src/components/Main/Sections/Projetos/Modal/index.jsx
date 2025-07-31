@@ -25,11 +25,15 @@ const Modal = ({ projeto, onClose, getStackEmoji }) => {
                     {/* LADO ESQUERDO */}
                     <div className={styles.left}>
                         <img
-                            src={projeto.imagemProjeto}
-                            alt={projeto.nomeProjeto}
+                            src={
+                                (projeto.stack.toLowerCase() === "back-end"
+                                    && !projeto.imagemProjeto)
+                                    ? "assets/backend.png"
+                                    : projeto.imagemProjeto
+                            }
+                            alt={projeto.title}
                             className={styles.projetoImage}
                         />
-
                         {projeto.anoDesenvolvimento && (
                             <small className={styles.year}>
                                 Desenvolvido em: {projeto.anoDesenvolvimento}

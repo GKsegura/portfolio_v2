@@ -3,6 +3,8 @@ import Modal from './Modal';
 import ProjetoCard from './ProjetoCard';
 import styles from './Projetos.module.css';
 
+const urlAPI = 'http://localhost:8080/projetos';
+
 const getStackEmoji = (stack) => {
     switch (stack.toLowerCase()) {
         case 'full stack': return '🌐';
@@ -21,7 +23,7 @@ const Projetos = () => {
     useEffect(() => {
         const fetchProjetos = async () => {
             try {
-                const response = await fetch('http://localhost:8080/projetos');
+                const response = await fetch(urlAPI);
                 if (!response.ok) throw new Error(`Erro HTTP: ${response.status}`);
                 const data = await response.json();
 

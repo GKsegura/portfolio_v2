@@ -5,7 +5,6 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    /* centraliza horizontalmente */
 }
 
 .introContainer {
@@ -88,7 +87,6 @@
     transform: scale(0.98);
 }
 
-/* Responsividade para telas maiores */
 @media (min-width: 768px) {
     .introContainer {
         flex-direction: row;
@@ -100,7 +98,6 @@
     }
 }
 
-/* Seção tecnologias */
 .tecnologias {
     max-width: 1000px;
     width: 100%;

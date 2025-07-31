@@ -16,7 +16,16 @@ const ProjetoCard = ({ projeto, onVerMais }) => {
             <h3>{projeto.nomeProjeto}</h3>
             <div className={styles.projetoConteudo}>
                 <div className={styles.mediaSection}>
-                    <img src={projeto.imagemProjeto} alt={projeto.title} className={styles.projetoImage} />
+                    <img
+                        src={
+                            (projeto.stack.toLowerCase() === "back-end"
+                                && !projeto.imagemProjeto)
+                                ? "assets/backend.png"
+                                : projeto.imagemProjeto
+                        }
+                        alt={projeto.title}
+                        className={styles.projetoImage}
+                    />
                     {projeto.anoDesenvolvimento && <small className={styles.year}>Desenvolvido em: {projeto.anoDesenvolvimento}</small>}
                     <ul className={styles.languages}>
                         {projeto.languages?.map((tec, index) => {
